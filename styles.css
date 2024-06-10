@@ -1,0 +1,140 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #151515;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+    background-color: #202020;
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-weight: normal;
+    font-size: 6rem;
+    margin: 0;
+}
+
+.hero h1 small {
+    font-size: 1rem;
+}
+
+.other-media {
+    display: flex;
+    justify-content: center;
+    margin: 10px
+}
+
+.other-media a {
+    margin: 10px;
+}
+
+.filter-nav {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.filter-nav a {
+    min-width: 120px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    padding: 9px;
+    border: 1px solid;
+    border-radius: 6px;
+    background: white;
+    margin: 4px;
+}
+
+.streamers {
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px 5%;
+    flex-wrap: wrap;
+    display:flex;
+    background: #202020;
+    border-radius: 10px;
+}
+
+.streamer-card {
+    width: 300px;
+    margin: 0 auto 20px auto;
+    color: white;
+    background: linear-gradient(to bottom, #151515, #151515, #085552);
+    border-radius: 20px 20px 20px 20px;
+    border-color: #252525;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.card-photo img {
+    max-width: 290px;
+    max-height: 290px;
+    margin: 5px 5px;
+    display: flex;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-name {
+    max-height: 250px;
+    background-color: #00000025;
+    margin: 0px 5px;
+    border-radius: 0 0 12px  12px;
+}
+
+.card-name h3{
+    padding-top: 5px;
+    margin: 0 0 10px 15px;
+    color: white;
+}
+
+.card-name p {
+    margin:0px 20px 10px 20px;
+    text-align:justify;
+    max-width: 280px;
+    max-height: 200px;
+    word-wrap:break-word;
+    overflow:hidden;
+}
+
+.card-footer {
+    margin-top: 5px;
+    width: 280px;
+    display: flex;
+}
+
+.card-links {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 220px;
+}
+
+.card-footer img {
+    margin-left: 10px;
+    max-width: 1.5rem;
+}
+
+.card-live-status {
+    overflow: hidden;
+    text-align: end;
+    height: 32px;
+    width: 80px;
+}
+
+.card-live-status small {
+    margin: 0;
+}
