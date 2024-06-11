@@ -58,8 +58,8 @@ body {
 
 .streamers {
     padding-top: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 60px;
+    padding-right: 60px;
     flex-wrap: wrap;
     display:flex;
     background: #202020;
@@ -67,23 +67,23 @@ body {
 
 .streamer-card {
     width: 300px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     color: white;
     background: linear-gradient(to bottom, #151515, #151515, #ffffff);
-    border-radius: 20px 20px 20px 20px;
-    border-color: #303030;
+    border-radius: 20px;
+    border-color: white;
     border-width: 6px;
     border-style: solid;
 }
 
 .card-photo img {
     background-color: #00000030;
-    max-width: 290px;
-    max-height: 290px;
-    margin: 5px 5px 5px 5px;
+    width: 280px;
+    margin: 10px auto;
     display: flex;
-    object-fit:cover;
-    border-radius: 12px 12px 12px 12px;
+    flex-direction: row;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
 }
 
 .card-name {
@@ -91,36 +91,35 @@ body {
     font-style: normal;
     font-size: 14px;
     font-weight: 400;
-    margin: 0 5px;
     border-radius: 0 0 12px 12px;
     align-content: center;
 }
 
 .card-name h3{
-    margin: 0 5px;
+    margin: 0 10px;
     color: white;
 }
 
 .card-name p {
-    max-width: 280px;
     display:flex;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
     justify-content: center;
     text-align: center;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 10px 10px;
+    padding: 5px 10px;
     background-color: #00000030;
-    border-radius: 10px;
     height: 80px;
     max-height: 80px;;
     line-height: 20px;
     font-size: 14px;
+    border-radius: 0 0 6px 6px;
 }
 
 .card-footer {
     margin: 0;
+    padding: 0 10px;
     border-radius: 0 0 12px 12px;
     display: flex;
     width: 300;
