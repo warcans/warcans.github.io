@@ -96,11 +96,12 @@ body {
 }
 
 .card-name h3{
-    margin: 0 0 5px 8px;
+    margin: 10px 0 5px 8px;
     color: white;
 }
 
 .card-name p {
+    margin-top: 10px;
     padding-left: 7px;
     padding-right: 7px;
     padding-bottom: 7px;
@@ -123,7 +124,7 @@ body {
 }
 
 .card-links {
-    margin-top: 8px;
+    margin-top: 4px;
     overflow: hidden;
     display: flex;
     width: 220px;
@@ -143,7 +144,7 @@ body {
 
 .card-live-status {
     height: 26px;
-    margin-top: 10px;
+    margin-top: 6px;
     overflow: hidden;
     text-align:right;
     width: 80px;

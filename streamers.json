@@ -1,14 +1,26 @@
 [
     {
+        "name": "ExampleUser",
+        "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+        "description": "This is an example user. We don't know much about them but we're sure you can figure something out. This description can be 4 rows in length until it gets cut off mid sentence",
+        "twitter": "exampleuser",
+        "bluesky":"exampleuser.bsky.social",
+        "youtube": "@exampleuserYT",
+        "tiktok": "exampleuser",
+        "discord": "discordlink",
+        "color1": "#e31285"
+    },
+    
+    {
         "name": "monqueeeek",
         "image":"images/headshots/monqueeeek.jpg",
-        "description": "description",
+        "description": "",
         "color1": "#834827"
     },
     {
         "name": "Octavess",
         "image":"images/headshots/octavess.jpg",
-        "description": "description",
+        "description": "",
         "color1": "#81c4a9"
     },
     {

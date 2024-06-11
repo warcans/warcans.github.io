@@ -1,4 +1,4 @@
-const streamerFetch = await fetch("streamerExample.json")
+const streamerFetch = await fetch("streamers.json")
 const streamers = await streamerFetch.json()
 
 const template = document.querySelector("#streamer-card")
@@ -10,9 +10,6 @@ streamers.forEach(user => {
     const clone = template.content.cloneNode(true)
     
     const img = clone.querySelector("#photo")
-    img.onerror = () => img.src = "images/headshots/" + user.name + ".png"
-    img.src = "images/headshots/" + user.name + ".jpg"
-
     img.src = user.image
 
     clone.querySelector("#card-link").href = "https://twitch.tv/" + user.name
