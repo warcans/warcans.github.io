@@ -58,13 +58,11 @@ body {
 
 .streamers {
     padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 20px 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     flex-wrap: wrap;
     display:flex;
     background: #202020;
-    border-radius: 10px;
 }
 
 .streamer-card {
@@ -90,9 +88,9 @@ body {
 
 .card-name {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    font-kerning: 2px;
     font-style: normal;
     font-size: 14px;
+    font-weight: 400;
     margin: 0 5px;
     border-radius: 0 0 12px 12px;
     align-content: center;
