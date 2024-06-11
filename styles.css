@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
 .hero {
@@ -79,7 +79,7 @@ body {
 }
 
 .card-photo img {
-    background-color: #00000050;
+    background-color: #00000030;
     max-width: 290px;
     max-height: 290px;
     margin: 5px 5px 5px 5px;
@@ -89,53 +89,55 @@ body {
 }
 
 .card-name {
-    max-height: 105px;
-    margin: 5px 5px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-kerning: 2px;
+    font-style: normal;
+    font-size: 14px;
+    margin: 0 5px;
     border-radius: 0 0 12px 12px;
-    padding-bottom: 10px;
+    align-content: center;
 }
 
 .card-name h3{
-    margin: 10px 0 5px 8px;
+    margin: 0 5px;
     color: white;
 }
 
 .card-name p {
-    margin-top: 10px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    background-color: #00000050;
-    border-radius: 10px;
-    font-size: 14px;
+    max-width: 280px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
     text-align: center;
-    font-weight: 500;
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #00000030;
+    border-radius: 10px;
+    height: 80px;
+    max-height: 80px;;
     line-height: 20px;
-    word-wrap: break-word;
-    overflow:hidden;
-    vertical-align: middle;
-    height: 75px;
+    font-size: 14px;
 }
 
 .card-footer {
-    width: 280px;
+    margin: 0;
+    border-radius: 0 0 12px 12px;
     display: flex;
-    margin: 5px 0px 5px 0px;
+    width: 300;
+    background-color: #00000030;
 }
 
 .card-links {
+    margin-left: 10px;
+    height: 30px;
     margin-top: 4px;
     overflow: hidden;
-    display: flex;
-    width: 220px;
-}
-
-.card-footer {
-    margin-left: 10px;
 }
 
 .card-footer a {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .card-footer img {
@@ -143,13 +145,9 @@ body {
 }
 
 .card-live-status {
-    height: 26px;
-    margin-top: 6px;
-    overflow: hidden;
-    text-align:right;
-    width: 80px;
-}
-
-.card-live-status small {
-    margin: 0;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 }

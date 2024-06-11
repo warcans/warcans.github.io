@@ -37,7 +37,7 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    clone.querySelector("#bgcolor").style = "background: linear-gradient(-45deg, " + user.color1 + ", " + user.color1 + ");"
+    clone.querySelector("#bgcolor").style = "background: linear-gradient(120deg, #202020 , " + user.color1 + ");"
 
     wrapper.appendChild(clone)
 });

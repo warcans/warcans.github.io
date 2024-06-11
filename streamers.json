@@ -2,121 +2,103 @@
     {
         "name": "ExampleUser",
         "image": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
-        "description": "This is an example user. We don't know much about them but we're sure you can figure something out. This description can be 4 rows in length until it gets cut off mid sentence",
+        "description": "This is an example user. Remove before publishing. The description should be the length of this string, or it might risk overflow on some devices",
         "twitter": "exampleuser",
         "bluesky":"exampleuser.bsky.social",
         "youtube": "@exampleuserYT",
-        "tiktok": "exampleuser",
+        "tiktok": "@exampleuser",
         "discord": "discordlink",
         "color1": "#e31285"
     },
-    
     {
         "name": "monqueeeek",
         "image":"images/headshots/monqueeeek.jpg",
-        "description": "",
-        "color1": "#834827"
+        "color1": "#7d6867"
     },
     {
         "name": "Octavess",
         "image":"images/headshots/octavess.jpg",
-        "description": "",
         "color1": "#81c4a9"
     },
     {
         "name": "ItsWolflord",
         "image":"images/headshots/itswolflord.png",
-        "description": "description",
         "color1": "#8e79d5"
     },
     {
         "name": "rhopus",
         "image":"images/headshots/rhopus.jpg",
-        "description": "description",
         "color1": "#464151"
     },
     {
         "name": "BabyDino4",
         "image":"images/headshots/babydino4.jpg",
-        "description": "description",
         "color1": "#2e1920"
     },
     {
         "name": "SkiBiPro",
         "image":"images/headshots/skibipro.png",
-        "description": "description",
         "color1": "#379332"
     },
     {
         "name": "WilliamPatriot",
         "image":"images/headshots/williampatriot.png",
-        "description": "description",
         "color1": "#063695"
     },
     {
         "name": "HexManikin",
         "image":"images/headshots/hexmanikin.jpg",
-        "description": "description",
         "color1": "#a06a67"
     },
     {
         "name": "TheGourdie",
         "image":"images/headshots/thegourdie.png",
-        "description": "description",
         "color1": "#bf7810"
     },
     {
         "name": "ViperKii",
         "image":"images/headshots/viperkii.jpg",
-        "description": "description",
         "color1": "#9f131d"
     },
     {
         "name": "JasperGeist",
         "image":"images/headshots/jaspergeist.jpg",
-        "description": "description",
         "color1": "#5e8e8a"
     },
     {
         "name": "ruiuminari",
         "image":"images/headshots/ruiuminari.jpg",
-        "description": "description",
         "color1": "#5cb8b2"
     },
     {
         "name": "kuxips",
         "image":"images/headshots/kuxips.png",
-        "description": "description",
         "color1": "#ffca00"
     },
     {
         "name": "nijuuu",
         "image":"images/headshots/nijuuu.png",
-        "description": "description",
         "color1": "#f97ca5"
     },
     {
         "name": "MediocreAtVideoGames",
         "image":"images/headshots/mediocreatvideogames.jpg",
-        "description": "description",
         "color1": "#5e6a56"
     },
     {
         "name": "PrincessBampy",
         "image":"images/headshots/princessbampy.jpg",
-        "description": "description",
         "color1": "#a369d0"
     },
     {
         "name": "Vishi_An",
         "image":"images/headshots/Vishi_An.jpg",
-        "description": "description",
         "color1": "#085552"
     },
     {
         "name": "Warcans_",
         "image":"images/headshots/warcans_.jpg",
-        "description": "i did this wowzers design 🚀",
+        "description": "🚀 wowzers 🚀",
         "twitter": "Warcans_",
         "youtube": "@Warcans",
         "bluesky": "warcans.bsky.social",
