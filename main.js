@@ -1,7 +1,7 @@
 const streamerFetch = await fetch("streamers.json")
 const streamers = await streamerFetch.json()
 
-const template = document.querySelector("#streamer-card")
+const template = document.querySelector("#default-card")
 const wrapper = document.createDocumentFragment("div")
 
 const fileExt = [".jpg", ".png"]
@@ -37,7 +37,7 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    clone.querySelector("#bgcolor").style = "background: linear-gradient(120deg, #252525 , " + user.color1 + ");"
+    clone.querySelector("#bgcolor").style = "background: linear-gradient(120deg, #202020 , " + user.color1 + ");"
 
     wrapper.appendChild(clone)
 });

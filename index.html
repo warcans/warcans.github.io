@@ -6,6 +6,9 @@
     <title>Twitch frens</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero">
@@ -28,8 +31,9 @@
 
     <div class="streamers">
     </div>
-
-    <template id="streamer-card">
+    
+    <!-- default card -->
+    <template id="default-card">
         <div class="streamer-card" id="bgcolor">
             <a href="" class="card-photo" id="card-link"><img src="" alt="" id="photo"></a>
             <div class="card-name">
@@ -48,5 +52,26 @@
             </div>
         </div>
     </template>
+
+    <!-- mtg card -->
+    <template id="mtg-card">
+        <div class="streamer-card" id="bgcolor">
+            <div class="card-name"><h3 id="username"></h3></div>
+            <a href="" class="card-photo" id="card-link"><img src="" alt="" id="photo"></a>
+            <h3 class="card-creature">Creature - Content Creator</h3>
+            <div class="card-name"><p id="description"></p></div>
+            <div class="card-footer" id="footer">
+                <div class="card-links">
+                    <a href="" id="twitter"><img src="images/twitter.png" alt="twitter"></a>
+                    <a href="" id="bluesky"><img src="images/bluesky.png" alt="bluesky"></a>
+                    <a href="" id="youtube"><img src="images/youtube.png" alt="youtube"></a>
+                    <a href="" id="tiktok"><img src="images/tiktok.png" alt="tiktok"></a>
+                    <a href="" id="discord"><img src="images/discord.png" alt="discord"></a>
+                </div>
+                <div class="card-live-status" id="live-status">LIVE</div>
+            </div>
+        </div>
+    </template>
+
 </body>
 </html>

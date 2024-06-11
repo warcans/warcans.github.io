@@ -1,15 +1,15 @@
 html, body {
     padding: 0;
     margin: 0;
-    background-color: #151515;
+    background-color: #101010;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .hero {
-    background-color: #202020;
+    background-color: #151515;
     color: white;
     padding: 50px 30px;
     text-align: center;
@@ -57,12 +57,12 @@ body {
 }
 
 .streamers {
-    padding-top: 20px;
+    padding-top: 60px;
     padding-left: 60px;
     padding-right: 60px;
     flex-wrap: wrap;
     display:flex;
-    background: #202020;
+    background: #121212;
 }
 
 .streamer-card {
@@ -71,23 +71,34 @@ body {
     color: white;
     background: linear-gradient(to bottom, #151515, #151515, #ffffff);
     border-radius: 20px;
-    border-color: white;
+    border-color: black;
     border-width: 6px;
     border-style: solid;
 }
 
+.streamer-card:hover {
+    transition: 0.3s all ease-in-out;
+    border-color: white;
+    border-width: 6px;
+}
+
+
 .card-photo img {
     background-color: #00000030;
     width: 280px;
-    margin: 10px auto;
+    margin: 10px auto 0 auto;
     display: flex;
     flex-direction: row;
     object-fit: cover;
     border-radius: 6px 6px 0 0;
+    border-bottom: #ffffff11 2px solid;
+    border-right: #ffffff11 2px solid;
+    border-left: #00000011 2px solid;
+    border-top: #00000011 2px solid;
 }
 
 .card-name {
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 14px;
     font-weight: 400;
@@ -96,6 +107,8 @@ body {
 }
 
 .card-name h3{
+    font-size: 20px;
+    font-weight: 600;
     margin: 0 10px;
     color: white;
 }
@@ -107,7 +120,7 @@ body {
     overflow: hidden;
     justify-content: center;
     text-align: center;
-    margin: 10px 10px;
+    margin: 5px 10px;
     padding: 5px 10px;
     background-color: #00000030;
     height: 80px;
