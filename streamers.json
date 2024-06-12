@@ -96,13 +96,4 @@
         "description":"A very normal cat and variety streamer",
         "color1": "#085552"
     },
-    {
-        "name": "Warcans_",
-        "image":"images/headshots/warcans_.jpg",
-        "description": "🚀 wowzers 🚀",
-        "twitter": "Warcans_",
-        "youtube": "@Warcans",
-        "bluesky": "warcans.bsky.social",
-        "color1": "#214478"
-    }
 ]
