@@ -54,7 +54,6 @@ streamers.forEach(user => {
     clone.querySelector("#live-status").textContent = "OFFLINE"
     live_status.forEach(key =>{
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
-            alert(key.user_name)
             clone.querySelector("#live-status").textContent = "LIVE"
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
                 clone.querySelector("#live-status").textContent = "AMIGI"
