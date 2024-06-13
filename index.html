@@ -6,21 +6,18 @@
     <title>Twitch frens</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+   </head>
 <body>
     <div class="hero">
         <h1>Amigis.<small>Live</small></h1>
-        <p>A Minecraft server dedicated to bringing <br> content creators, and their communities together</p>
+        <p id="subtext">A Minecraft server dedicated to bringing <br> content creators, and their communities together</p>
     </div>
 
     <div class="other-media">
-        <a href="images/twitter.png"><img src="images/twitter.png" alt=""></a>
-        <a href="images/youtube.png"><img src="images/youtube.png" alt=""></a>
-        <a href="images/tiktok.png"><img src="images/tiktok.png" alt=""></a>
-        <a href="images/discord.png"><img src="images/discord.png" alt=""></a>
+        <a href="https://x.com/AmigisLive"><img src="images/twitter.png" alt=""></a>
+        <a href="https://www.youtube.com/@AmigisLive"><img src="images/youtube.png" alt=""></a>
+        <a href="https://www.tiktok.com/@amigislive"><img src="images/tiktok.png" alt=""></a>
+        <a href="https://discord.gg/hUjv3d4BDu"><img src="images/discord.png" alt=""></a>
     </div>
 
     <div class="filter-nav">
@@ -34,7 +31,7 @@
     
     <!-- default card -->
     <template id="default-card">
-        <div class="streamer-card" id="bgcolor">
+        <div class="streamer-card" id="bgcolor" href="" id="card-link">
             <a href="" class="card-photo" id="card-link"><img src="" alt="" id="photo"></a>
             <div class="card-name">
                 <h3 id="username"></h3>
@@ -52,26 +49,5 @@
             </div>
         </div>
     </template>
-
-    <!-- mtg card -->
-    <template id="mtg-card">
-        <div class="streamer-card" id="bgcolor">
-            <div class="card-name"><h3 id="username"></h3></div>
-            <a href="" class="card-photo" id="card-link"><img src="" alt="" id="photo"></a>
-            <h3 class="card-creature">Creature - Content Creator</h3>
-            <div class="card-name"><p id="description"></p></div>
-            <div class="card-footer" id="footer">
-                <div class="card-links">
-                    <a href="" id="twitter"><img src="images/twitter.png" alt="twitter"></a>
-                    <a href="" id="bluesky"><img src="images/bluesky.png" alt="bluesky"></a>
-                    <a href="" id="youtube"><img src="images/youtube.png" alt="youtube"></a>
-                    <a href="" id="tiktok"><img src="images/tiktok.png" alt="tiktok"></a>
-                    <a href="" id="discord"><img src="images/discord.png" alt="discord"></a>
-                </div>
-                <div class="card-live-status" id="live-status">LIVE</div>
-            </div>
-        </div>
-    </template>
-
 </body>
 </html>

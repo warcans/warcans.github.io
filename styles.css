@@ -37,15 +37,18 @@ body {
 }
 
 .filter-nav {
-    margin: 10px;
+    min-width: 140px;
+    margin: 10px auto 20px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
 }
 
 .filter-nav a {
+    display: flex;
     min-width: 120px;
-    text-align: center;
+    justify-content: center;
     text-decoration: none;
     font-weight: bold;
     color:black;
@@ -58,11 +61,11 @@ body {
 
 .streamers {
     padding-top: 60px;
-    padding-left: 60px;
-    padding-right: 60px;
     flex-wrap: wrap;
     display:flex;
     background: #121212;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
 .streamer-card {
@@ -72,16 +75,16 @@ body {
     background: linear-gradient(to bottom, #151515, #151515, #ffffff);
     border-radius: 20px;
     border-color: black;
-    border-width: 6px;
+    border-width: 2px;
     border-style: solid;
 }
 
 .streamer-card:hover {
     transition: 0.3s all ease-in-out;
     border-color: white;
-    border-width: 6px;
+    border-width: 2px;
+    box-shadow: 0px 0px 5px 5px black;
 }
-
 
 .card-photo img {
     background-color: #00000030;
@@ -107,6 +110,7 @@ body {
 }
 
 .card-name h3{
+    text-align: center;
     font-size: 20px;
     font-weight: 600;
     margin: 0 10px;
