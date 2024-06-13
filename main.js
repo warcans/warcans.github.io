@@ -13,18 +13,29 @@ var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
-const wrapper = document.createDocumentFragment("div")
+const wrapper_all = document.createDocumentFragment("div")
+const wrapper_live = document.createDocumentFragment("div")
+const wrapper_not_live = document.createDocumentFragment("div")
+const wrapper_amigi = document.createDocumentFragment("div")
+const wrapper_not_amigi = document.createDocumentFragment("div")
 
 const fileExt = [".jpg", ".png"]
 
 streamers.forEach(user => {
     const clone = template.content.cloneNode(true)
-    
+
+    var filter = true
+    var live = false
+    var amigi = false
+
     const img = clone.querySelector("#photo")
     img.src = user.image
 
     clone.querySelector("#card-link").href = "https://twitch.tv/" + user.name
+
     clone.querySelector("#username").textContent = user.name
+
+
     clone.querySelector("#description").textContent = user.description
 
     var twitter = clone.querySelector("#twitter")
@@ -48,24 +59,35 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    var card_style = "background: linear-gradient(120deg, #202020 , " + user.color1 + ");"
+    var card_style = "background: linear-gradient(180deg in hsl shorter hue, #40404080 25%, " + user.color1 + "80 75%);"
 
     // SET LIVE STATUS
     clone.querySelector("#live-status").textContent = "OFFLINE"
     live_status.forEach(key =>{
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
+            live = true
             clone.querySelector("#live-status").textContent = "● LIVE"
             clone.querySelector("#live-status").style = "color:red;text-shadow:red 0px 0px 15px"
-            card_style += ";box-shadow: 0px 0px 15px 0px red"
+            card_style += ";box-shadow: 0px 0px 10px 0px red"
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
-                clone.querySelector("#live-status").textContent = "AMIGI"
+                amigi = true
+                clone.querySelector("#live-status").textContent = "● AMIGI"
+                clone.querySelector("#live-status").style = "color:lime;text-shadow:0px 0px 15px"
+                card_style += ";box-shadow: 0px 0px 10px 0px lime"
             }
         }
     })
 
     clone.querySelector("#bgcolor").style = card_style
-
-    wrapper.appendChild(clone);
+    if (filter){
+        if (amigi == true){
+            wrapper_amigi.appendChild(clone)
+        }
+        if (live == true){
+            wrapper_live.appendChild(clone)
+        }
+    }
+    wrapper_all.appendChild(clone);
 })
 
 function loadXMLDoc() {
@@ -88,5 +110,6 @@ function loadXMLDoc() {
     xmlhttp.open("GET", url, false)
     xmlhttp.send()
 }
-
-document.querySelector(".streamers").appendChild(wrapper)
+document.querySelector(".streamers").appendChild(wrapper_amigi)
+document.querySelector(".streamers").appendChild(wrapper_live)
+document.querySelector(".streamers").appendChild(wrapper_all)

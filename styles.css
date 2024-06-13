@@ -36,29 +36,6 @@ body {
     margin: 10px;
 }
 
-.filter-nav {
-    min-width: 140px;
-    margin: 10px auto 20px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-.filter-nav a {
-    display: flex;
-    min-width: 120px;
-    justify-content: center;
-    text-decoration: none;
-    font-weight: bold;
-    color:black;
-    padding: 9px;
-    border: 1px solid;
-    border-radius: 6px;
-    background: white;
-    margin: 4px;
-}
-
 .streamers {
     padding-top: 60px;
     flex-wrap: wrap;
@@ -69,8 +46,9 @@ body {
 }
 
 .streamer-card {
+    transition: 0.3s all ease-in-out;
     width: 300px;
-    margin: 0 auto 10px auto;
+    margin: 10px auto 10px auto;
     color: white;
     background: linear-gradient(to bottom, #151515, #151515, #ffffff);
     border-radius: 20px;
@@ -80,14 +58,15 @@ body {
 }
 
 .streamer-card:hover {
-    transition: 0.3s all ease-in-out;
+    transition: 0.1s all ease-in-out;
+    margin: 0px auto 20px auto;
     border-color: white;
     border-width: 2px;
     box-shadow: 0px 0px 5px 5px black;
 }
 
 .card-photo img {
-    background-color: #000000aa;
+    background-color: #00000070;
     width: 280px;
     margin: 10px auto 0 auto;
     display: flex;
@@ -126,7 +105,7 @@ body {
     text-align: center;
     margin: 5px 10px;
     padding: 5px 10px;
-    background-color: #000000aa;
+    background-color: #00000070;
     height: 80px;
     max-height: 80px;;
     line-height: 20px;
@@ -140,7 +119,7 @@ body {
     border-radius: 0 0 18px 18px;
     display: flex;
     width: 280px;
-    background-color: #000000aa;
+    background-color: #00000070;
 }
 
 .card-links {
