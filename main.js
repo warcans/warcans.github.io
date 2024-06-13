@@ -55,7 +55,7 @@ streamers.forEach(user => {
     live_status.forEach(key =>{
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
             clone.querySelector("#live-status").textContent = "● LIVE"
-            clone.querySelector("#live-status").style = "color:red"
+            clone.querySelector("#live-status").style = "color:red;text-shadow:red 0px 0px 15px"
             card_style += ";box-shadow: 0px 0px 15px 0px red"
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
                 clone.querySelector("#live-status").textContent = "AMIGI"
