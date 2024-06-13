@@ -1,12 +1,15 @@
 var streamerFetch = await fetch("streamers.json")
 var streamers = await streamerFetch.json()
 
-// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch = await fetch("live_status.json")
+var live_statusFetch
 
-var live_statusFetch = await fetch("live_status.json")
-// loadXMLDoc()
+loadXMLDoc()
 
-var live_status = await live_statusFetch.json() 
+var live_status = JSON.parse(live_statusFetch)
+
+// var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
@@ -51,6 +54,7 @@ streamers.forEach(user => {
     clone.querySelector("#live-status").textContent = "OFFLINE"
     live_status.forEach(key =>{
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
+            alert(key.user_name)
             clone.querySelector("#live-status").textContent = "LIVE"
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
                 clone.querySelector("#live-status").textContent = "AMIGI"
@@ -60,25 +64,25 @@ streamers.forEach(user => {
     wrapper.appendChild(clone);
 })
 
+function loadXMLDoc() {
+    var xmlhttp = new XMLHttpRequest()
+
+    xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
+            if (xmlhttp.status == 200) {
+                live_statusFetch = xmlhttp.responseText;
+            }
+            else if (xmlhttp.status == 400) {
+                alert('There was an error 400');
+            }
+            else {
+                alert('something else other than 200 was returned');
+            }
+        }
+    }
+
+    xmlhttp.open("GET", url, false)
+    xmlhttp.send()
+}
+
 document.querySelector(".streamers").appendChild(wrapper)
-
-// function loadXMLDoc() {
-//     var xmlhttp = new XMLHttpRequest();
-
-//     xmlhttp.onreadystatechange = function() {
-//         if (xmlhttp.readyState == XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
-//            if (xmlhttp.status == 200) {
-//                 live_statusFetch = xmlhttp.responseText;
-//            }
-//            else if (xmlhttp.status == 400) {
-//               alert('There was an error 400');
-//            }
-//            else {
-//                alert('something else other than 200 was returned');
-//            }
-//         }
-//     };
-
-//     xmlhttp.open("GET", url, true);
-//     xmlhttp.send();
-// }
