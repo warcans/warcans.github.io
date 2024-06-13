@@ -97,9 +97,12 @@
         "color1": "#085552"
     },
     {
-        "name": "Yeoden",
-        "image": "https://static-cdn.jtvnw.net/jtv_user_pictures/f2ed8a5c-0d97-4a19-8b75-46de875eaaf3-profile_image-300x300.png",
-        "description": "Pizza Cat",
-        "color1":"#b58d66"
+        "name": "Warcans_",
+        "image":"images/headshots/warcans_.jpg",
+        "description": "🚀 wowzers 🚀",
+        "twitter": "Warcans_",
+        "youtube": "@Warcans",
+        "bluesky": "warcans.bsky.social",
+        "color1": "#214478"
     }
 ]
