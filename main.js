@@ -1,15 +1,15 @@
 var streamerFetch = await fetch("streamers.json")
 var streamers = await streamerFetch.json()
 
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-// var live_statusFetch = await fetch("live_status.json")
-var live_statusFetch
+// LIVE PUBLISH
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
-loadXMLDoc()
-
-var live_status = JSON.parse(live_statusFetch)
-
-// var live_status = await live_statusFetch.json()
+// DEV
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
@@ -48,18 +48,23 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    clone.querySelector("#bgcolor").style = "background: linear-gradient(120deg, #202020 , " + user.color1 + ");"
+    var card_style = "background: linear-gradient(120deg, #202020 , " + user.color1 + ");"
 
     // SET LIVE STATUS
     clone.querySelector("#live-status").textContent = "OFFLINE"
     live_status.forEach(key =>{
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
-            clone.querySelector("#live-status").textContent = "LIVE"
+            clone.querySelector("#live-status").textContent = "● LIVE"
+            clone.querySelector("#live-status").style = "color:red"
+            card_style += ";box-shadow: 0px 0px 15px 0px red"
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
                 clone.querySelector("#live-status").textContent = "AMIGI"
             }
         }
     })
+
+    clone.querySelector("#bgcolor").style = card_style
+
     wrapper.appendChild(clone);
 })
 
