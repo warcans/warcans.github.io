@@ -46,23 +46,31 @@ body {
 }
 
 .streamer-card {
-    transition: 0.3s all ease-in-out;
+    transition: 0.1s all ease-in-out;
     width: 300px;
     margin: 10px auto 10px auto;
     color: white;
     background: linear-gradient(to bottom, #151515, #151515, #ffffff);
     border-radius: 20px;
     border-color: black;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
 }
 
 .streamer-card:hover {
     transition: 0.1s all ease-in-out;
     margin: 0px auto 20px auto;
-    border-color: white;
-    border-width: 2px;
+    border-color: gray;
     box-shadow: 0px 0px 5px 5px black;
+    transform: scale(1.05);
+}
+
+.streamer-card[status="live"]:hover{
+    border-color: red;
+}
+
+.streamer-card[status="amigi"]:hover{
+    border-color: lime;
 }
 
 .card-photo img {
@@ -80,10 +88,13 @@ body {
 }
 
 .card-name {
+    cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 14px;
     font-weight: 400;
+    text-decoration: none;
+    color:white;
     border-radius: 0 0 12px 12px;
     align-content: center;
 }
@@ -123,6 +134,7 @@ body {
 }
 
 .card-links {
+    cursor: default;
     margin-left: 10px;
     height: 30px;
     margin-top: 4px;
@@ -140,6 +152,7 @@ body {
 }
 
 .card-live-status {
+    cursor: default;
     font-weight: bold;
     margin-left: auto;
     margin-right: 10px;
