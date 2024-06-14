@@ -1,3 +1,4 @@
-[{"user_name":"ExampleUser","status":"live","is_amigis":"true","is_minecraft":"true","game":"Minecraft 2"},
-{"user_name":"warcans_","status":"live","is_amigis":"true","is_minecraft":"false","game":"Eurotruck Simulator 2: Electic Truckaloo"}
+[
+  {"user_name":"ExampleUser","status":"live","is_amigis":"true","is_minecraft":"true","game":"Minecraft 2"},
+  {"user_name":"warcans_","status":"live","is_amigis":"true","is_minecraft":"false","game":"Eurotruck Simulator 2: Electric Truckaloo"}
 ]
