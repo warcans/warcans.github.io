@@ -77,7 +77,8 @@ body {
 }
 
 .streamer-card:hover .card-photo {
-    transition: 1s;
+    transition: all 1s;
+    transition-delay: 1s;
     pointer-events: all;
 }
 
@@ -108,7 +109,8 @@ body {
 }
 
 .streamer-card:hover .card-name{
-    transition: 1s;
+    transition: all 1s;
+    transition-delay: 1s;
     pointer-events: all;
 }
 
