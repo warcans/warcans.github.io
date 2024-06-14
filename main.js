@@ -67,23 +67,27 @@ streamers.forEach(user => {
     // SET LIVE STATUS
     var card_status = clone.querySelector("#live-status")
     card_status.textContent = "OFFLINE"
+
     live_status.forEach(key =>{
+
+        // SET ELEMENTS FOR LIVES
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
             live = true
             var animation_length = ((100/key.game.length*key.game.length)/600) / (1/(key.game.length+32.5))
             card_status.textContent = key.game.toUpperCase()
             card_status.style = "color:red;text-shadow:red 0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
             card_style += ";box-shadow: 0px 0px 10px 0px red"
-
             var a = clone.getElementById("bgcolor")
             a.setAttribute("status", "live")
 
+            // SET ELEMENTS FOR AMIGI LIVES
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
                 amigi = true
-                card_status.textContent = "● AMIGI"
-                card_status.style = "color:lime;text-shadow:0px 0px 15px"
+                var amigi_text = "AMIGI MINECRAFT"
+                card_status.textContent = amigi_text
+                var animation_length = ((100/amigi_text.length*amigi_text.length)/600) / (1/(amigi_text.length+32.5))
+                card_status.style = "color:lime;text-shadow:0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
                 card_style += ";box-shadow: 0px 0px 10px 0px lime;"
-
                 a.setAttribute("status", "amigi")
             }
         }
@@ -91,7 +95,7 @@ streamers.forEach(user => {
 
     clone.querySelector("#bgcolor").style = card_style
 
-    if (live == false || amigi == true){
+    if (live == false){
         clone.querySelector(".card-live-status").style = "display:flex;justify-content:center;"
     }
 

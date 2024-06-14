@@ -50,7 +50,7 @@ body {
     width: 300px;
     margin: 10px auto 10px auto;
     color: white;
-    background: linear-gradient(to bottom, #151515, #151515, #ffffff);
+    background: linear-gradient(to bottom, #151515, #303030);
     border-radius: 20px;
     border-color: black;
     border-width: 1px;
@@ -116,8 +116,8 @@ body {
     overflow: hidden;
     justify-content: center;
     text-align: center;
-    margin: 0px 10px;
-    padding: 5px 10px;
+    margin: 0px 10px 0px 10px;
+    padding: 5px 10px 0px 10px;
     background-color: #00000070;
     height: 80px;
     max-height: 80px;;
@@ -128,10 +128,11 @@ body {
 
 .card-footer {
     margin: 0px 10px 10px 10px;
-    border-radius: 0 0 20px 20px;
+    padding-top: 8px;
+    border-radius: 0 0 12px 12px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #00000070 00%, #000000cc 75%, #000000ff 100%);
+    background: linear-gradient(to bottom, #00000070 0%, #000000ff 15%);
 }
 
 .card-links {
@@ -140,7 +141,6 @@ body {
     transition: 0.2s all ease-in-out;
     cursor: default;
     height: 0px;
-    margin-top: 4px;
     overflow: hidden;
     opacity: 0%;
 }
@@ -148,7 +148,7 @@ body {
 .streamer-card:hover .card-links {
     transition: 0.2s height ease-in-out, opacity 0.2s ease-in-out;
     height: 32px;
-    opacity: 100%
+    opacity: 100%;
 }
 
 .card-footer a {
@@ -156,7 +156,9 @@ body {
 }
 
 .card-footer img {
-    margin-top: 2px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
     max-width: 1.5rem;
 }
 
@@ -169,14 +171,13 @@ body {
     overflow: hidden;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 12px 12px;
 }
 
 .streamer-card:hover .card-live-status {
     transition: 0.2s height ease-in-out, opacity 0.1s ease-in-out;
     height: 0px;
     opacity: 0%;
-
 }
 
 .scroll-footer {
