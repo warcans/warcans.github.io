@@ -1,5 +1,3 @@
-[{"user_name":"ExampleUser","status":"live","is_amigis":"false","is_minecraft":"false","game":"Minecwaft:2"},
-{"user_name":"warcans_","status":"live","is_amigis":"true","is_minecraft":"false","game":"Eurotruck Simulator 2: Northern Ostrobothnia"},
-{"user_name":"vishi_an","status":"live","is_amigis":"true","is_minecraft":"true","game":"Minecraft"}
-
+[{"user_name":"ExampleUser","status":"live","is_amigis":"true","is_minecraft":"true","game":"Minecraft 2"},
+{"user_name":"warcans_","status":"live","is_amigis":"true","is_minecraft":"false","game":"Eurotruck Simulator 2: Electic Truckaloo"}
 ]
