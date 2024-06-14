@@ -72,8 +72,12 @@ body {
     border-color: lime;
 }
 
-.card-link {
+.card-photo {
     pointer-events: none;
+}
+
+.streamer-card:hover .card-photo {
+    pointer-events: all;
 }
 
 .card-photo img {
@@ -99,6 +103,11 @@ body {
     text-decoration: none;
     color:white;
     align-content: center;
+    pointer-events: none;
+}
+
+.streamer-card:hover .card-name{
+    pointer-events: all;
 }
 
 .card-name h3{
@@ -116,7 +125,7 @@ body {
     overflow: hidden;
     justify-content: center;
     text-align: center;
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 5px 10px;
     padding: 5px 10px 0px 10px;
     background-color: #00000070;
     height: 80px;
@@ -142,13 +151,11 @@ body {
     cursor: default;
     height: 0px;
     overflow: hidden;
-    opacity: 0%;
 }
 
 .streamer-card:hover .card-links {
-    transition: 0.2s height ease-in-out, opacity 0.2s ease-in-out;
+    transition: 0.2s height ease-in-out;
     height: 32px;
-    opacity: 100%;
 }
 
 .card-footer a {
@@ -156,14 +163,15 @@ body {
 }
 
 .card-footer img {
-    margin-top: 4px;
+    margin-top: 2px;
     margin-left: 4px;
     margin-right: 4px;
-    max-width: 1.5rem;
+    height: 75%;
+    width: 1.5rem;
 }
 
 .card-live-status {
-    margin-top: 4px;
+    margin-top: 2px;
     transition: 0.2s all ease-in-out;
     cursor: default;
     height: 32px;
@@ -186,7 +194,7 @@ body {
 
 @keyframes my-animation {
     0% {
-        transform: translateX(330px);
+        transform: translateX(310px);
     }
     100% {
         transform: translateX(-105%);
