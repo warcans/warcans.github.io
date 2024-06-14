@@ -59,7 +59,6 @@ body {
 
 .streamer-card:hover {
     transition: 0.1s all ease-in-out;
-    margin: 0px auto 20px auto;
     border-color: gray;
     box-shadow: 0px 0px 5px 5px black;
     transform: scale(1.05);
@@ -73,6 +72,10 @@ body {
     border-color: lime;
 }
 
+.card-link {
+    pointer-events: none;
+}
+
 .card-photo img {
     background-color: #00000070;
     width: 280px;
@@ -80,7 +83,7 @@ body {
     display: flex;
     flex-direction: row;
     object-fit: cover;
-    border-radius: 6px 6px 0 0;
+    border-radius: 12px;
     border-bottom: #ffffff11 2px solid;
     border-right: #ffffff11 2px solid;
     border-left: #00000011 2px solid;
@@ -95,7 +98,6 @@ body {
     font-weight: 400;
     text-decoration: none;
     color:white;
-    border-radius: 0 0 12px 12px;
     align-content: center;
 }
 
@@ -114,35 +116,42 @@ body {
     overflow: hidden;
     justify-content: center;
     text-align: center;
-    margin: 5px 10px;
+    margin: 0px 10px;
     padding: 5px 10px;
     background-color: #00000070;
     height: 80px;
     max-height: 80px;;
     line-height: 20px;
     font-size: 14px;
-    border-radius: 0 0 6px 6px;
+    border-radius: 12px 12px 0px 0px;
 }
 
 .card-footer {
-    margin: 0;
-    padding: 0 10px;
-    border-radius: 0 0 18px 18px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 0 0 20px 20px;
     display: flex;
-    width: 280px;
-    background-color: #00000070;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #00000070 00%, #000000cc 75%, #000000ff 100%);
 }
 
 .card-links {
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.2s all ease-in-out;
     cursor: default;
-    margin-left: 10px;
-    height: 30px;
+    height: 0px;
     margin-top: 4px;
     overflow: hidden;
+    opacity: 0%;
+}
+
+.streamer-card:hover .card-links {
+    transition: 0.2s height ease-in-out, opacity 0.2s ease-in-out;
+    height: 32px;
+    opacity: 100%
 }
 
 .card-footer a {
-    margin-right: 5px;
     align-content: center;
 }
 
@@ -152,10 +161,33 @@ body {
 }
 
 .card-live-status {
+    margin-top: 4px;
+    transition: 0.2s all ease-in-out;
     cursor: default;
+    height: 32px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    font-size: 18px;
     font-weight: bold;
-    margin-left: auto;
-    margin-right: 10px;
-    margin-top: auto;
-    margin-bottom: auto;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.streamer-card:hover .card-live-status {
+    transition: 0.2s height ease-in-out, opacity 0.1s ease-in-out;
+    height: 0px;
+    opacity: 0%;
+
+}
+
+.scroll-footer {
+    width: fit-content;
+}
+
+@keyframes my-animation {
+    0% {
+        transform: translateX(330px);
+    }
+    100% {
+        transform: translateX(-105%);
+    }
 }
