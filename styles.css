@@ -72,14 +72,21 @@ body {
     border-color: lime;
 }
 
-.card-photo {
-    pointer-events: none;
+.card-cover{
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin-bottom: 0px;
+    width: 300px;
+    height: 0px;
 }
 
-.streamer-card:hover .card-photo {
-    transition: all 1s;
-    transition-delay: 1s;
-    pointer-events: all;
+.streamer-card:hover .card-cover {
+    z-index: 1;
+    position: relative;
+    margin-bottom: -410px;
+    height: 410px;
+    cursor: pointer;
 }
 
 .card-photo img {
@@ -97,7 +104,6 @@ body {
 }
 
 .card-name {
-    cursor: pointer;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 14px;
@@ -105,13 +111,6 @@ body {
     text-decoration: none;
     color:white;
     align-content: center;
-    pointer-events: none;
-}
-
-.streamer-card:hover .card-name{
-    transition: all 1s;
-    transition-delay: 1s;
-    pointer-events: all;
 }
 
 .card-name h3{

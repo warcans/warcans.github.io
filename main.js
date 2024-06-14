@@ -2,22 +2,20 @@ var streamerFetch = await fetch("streamers.json")
 var streamers = await streamerFetch.json()
 
 // LIVE PUBLISH
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-var live_statusFetch
-loadXMLDoc()
-var live_status = JSON.parse(live_statusFetch)
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
 // DEV
-// var live_statusFetch = await fetch("live_status.json")
-// var live_status = await live_statusFetch.json()
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
 const wrapper_all = document.createDocumentFragment("div")
 const wrapper_live = document.createDocumentFragment("div")
-const wrapper_not_live = document.createDocumentFragment("div")
 const wrapper_amigi = document.createDocumentFragment("div")
-const wrapper_not_amigi = document.createDocumentFragment("div")
 
 const fileExt = [".jpg", ".png"]
 
@@ -32,7 +30,6 @@ streamers.forEach(user => {
     img.src = user.image
 
     const links = clone.querySelectorAll("#card-link")
-
     links.forEach(e =>{
         e.href = "https://twitch.tv/" + user.name
     })
@@ -73,7 +70,7 @@ streamers.forEach(user => {
         // SET ELEMENTS FOR LIVES
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
             live = true
-            var animation_length = ((100/key.game.length*key.game.length)/600) / (1/(key.game.length+32.5))
+            var animation_length = ((100/key.game.length*key.game.length)/600) / (1/(key.game.length+26))
             card_status.textContent = key.game.toUpperCase()
             card_status.style = "color:red;text-shadow:red 0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
             card_style += ";box-shadow: 0px 0px 10px 0px red"
@@ -85,7 +82,7 @@ streamers.forEach(user => {
                 amigi = true
                 var amigi_text = "AMIGI MINECRAFT"
                 card_status.textContent = amigi_text
-                var animation_length = ((100/amigi_text.length*amigi_text.length)/600) / (1/(amigi_text.length+32.5))
+                animation_length = ((100/amigi_text.length*amigi_text.length)/600) / (1/(amigi_text.length+26))
                 card_status.style = "color:lime;text-shadow:0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
                 card_style += ";box-shadow: 0px 0px 10px 0px lime;"
                 a.setAttribute("status", "amigi")
@@ -95,9 +92,7 @@ streamers.forEach(user => {
 
     clone.querySelector("#bgcolor").style = card_style
 
-    if (live == false){
-        clone.querySelector(".card-live-status").style = "display:flex;justify-content:center;"
-    }
+    if (live == false) clone.querySelector(".card-live-status").style = "display:flex;justify-content:center;"
 
     if (filter){
         if (amigi == true){
@@ -131,6 +126,7 @@ function loadXMLDoc() {
     xmlhttp.open("GET", url, false)
     xmlhttp.send()
 }
+
 document.querySelector(".streamers").appendChild(wrapper_amigi)
 document.querySelector(".streamers").appendChild(wrapper_live)
 document.querySelector(".streamers").appendChild(wrapper_all)
