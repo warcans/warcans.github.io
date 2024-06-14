@@ -62,7 +62,7 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    var card_style = "background: linear-gradient(180deg in hsl shorter hue, #404040 25%, " + user.color1 + "80 75%);"
+    var card_style = "background: linear-gradient(180deg, #404040 25%, " + user.color1 + "80 75%);"
 
     // SET LIVE STATUS
     clone.querySelector("#live-status").textContent = "OFFLINE"
