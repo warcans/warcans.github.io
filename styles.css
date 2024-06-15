@@ -82,6 +82,7 @@ body {
 }
 
 .streamer-card:hover .card-cover {
+    transition: all step-end 0.1s;
     z-index: 1;
     position: relative;
     margin-bottom: -410px;
