@@ -202,7 +202,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: row;
-    height: 47px;
+    height: 46px;
     transition: 0.2s all ease-in-out;
     cursor: default;
     text-wrap: nowrap;
