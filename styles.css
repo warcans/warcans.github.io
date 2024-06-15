@@ -166,7 +166,7 @@ body {
     border-radius: 0 0 16px 16px;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #00000070 0%, #000000ff 15%);
+    background: #000000cc;
 }
 
 .card-links {
