@@ -57,7 +57,6 @@ body {
 }
 
 .streamer-card {
-    z-index: 0;
     transition: 0.1s all ease-in-out;
     width: 300px;
     height: 475px;
