@@ -134,7 +134,7 @@ body {
 
 .card-name p {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     overflow: hidden;
     justify-content: center;
