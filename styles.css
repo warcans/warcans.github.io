@@ -73,7 +73,7 @@ body {
 }
 
 .card-cover{
-    z-index: 1;
+    z-index: -1;
     position: relative;
     display: block;
     margin-bottom: 0px;
