@@ -2,14 +2,14 @@ var streamerFetch = await fetch("streamers.json")
 var streamers = await streamerFetch.json()
 
 // LIVE PUBLISH
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-var live_statusFetch
-loadXMLDoc()
-var live_status = JSON.parse(live_statusFetch)
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
 // DEV
-// var live_statusFetch = await fetch("live_status.json")
-// var live_status = await live_statusFetch.json()
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
@@ -59,8 +59,8 @@ streamers.forEach(user => {
     if (user.discord != null) discord.href = "https://discord.com/" + user.discord
     else discord.remove()
 
-    var card_style = "background: linear-gradient(180deg, #404040 25%, " + user.color1 + "80 75%);"
-
+    var card_style = "background: " + user.color1 + ";"
+    // var card_style = "background: linear-gradient(180deg, #404040 25%, " + user.color1 + " 75%);"
     // SET LIVE STATUS
     var card_status = clone.querySelector("#live-status")
     card_status.textContent = "OFFLINE"
