@@ -1,3 +1,6 @@
+var streamerFetch = await fetch("streamers.json")
+var streamers = await streamerFetch.json()
+
 //// LIVE VERSION
 //// URL needs to be the URL to which backend serves data
 const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
