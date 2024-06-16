@@ -6,7 +6,8 @@
     <title>Twitch frens</title>
     <link rel="stylesheet" href="styles.css">
     <script type="module" src="main.js"></script>
-   </head>
+</head>
+
 <body>
     <div class="hero">
         <h1>Amigis.<small>Live</small></h1>
@@ -20,31 +21,36 @@
         <a href="https://discord.gg/hUjv3d4BDu"><img src="images/discord.png" alt=""></a>
     </div>
 
-    <div class="streamers">
-    </div>
-    
-    <!-- default card -->
-    <template id="default-card">
-        <div class="streamer-card" id="bgcolor">
-            <a href="" class="card-cover" id="card-link"></a>
-            <div class="card-photo"><img src="" alt="" id="photo" ></div>
-            <div class="card-name">
-                <h3 id="username"></h3>
-                <p id="description"></p>
+    <div class="streamers"></div>
+
+    <small class="footer">Made with ♥<br>~ Warcans ~</small>
+</body>
+
+<!-- default card -->
+<template id="default-card">
+    <div class="streamer-card" id="bgcolor">
+        <a href="" class="card-cover" id="card-link"></a>
+        <div class="card-photo"><img src="" alt="" id="photo" ></div>
+        <div class="card-name">
+            <h3 id="username"></h3>
+            <p id="description"></p>
+        </div>
+        <div class="card-footer" id="footer">
+            <div class="card-links">
+                <!-- <a href="" id="twitter"><img src="images/twitter.png" alt="twitter"></a>
+                <a href="" id="bluesky"><img src="images/bluesky.png" alt="bluesky"></a>
+                <a href="" id="youtube"><img src="images/youtube.png" alt="youtube"></a>
+                <a href="" id="tiktok"><img src="images/tiktok.png" alt="tiktok"></a>
+                <a href="" id="discord"><img src="images/discord.png" alt="discord"></a> -->
             </div>
-            <div class="card-footer" id="footer">
-                <div class="card-links">
-                    <a href="" id="twitter"><img src="images/twitter.png" alt="twitter"></a>
-                    <a href="" id="bluesky"><img src="images/bluesky.png" alt="bluesky"></a>
-                    <a href="" id="youtube"><img src="images/youtube.png" alt="youtube"></a>
-                    <a href="" id="tiktok"><img src="images/tiktok.png" alt="tiktok"></a>
-                    <a href="" id="discord"><img src="images/discord.png" alt="discord"></a>
-                </div>
-                <div class="card-live-status">
-                    <div class="scroll-footer" id="live-status"></div>
-                </div>
+            <div class="card-live-status">
+                <div class="scroll-footer" id="live-status"></div>
             </div>
         </div>
-    </template>
-</body>
+    </div>
+</template>
+
+<template id="social-link">
+    <a href="" id="social"><img src="" alt="" id="social-icon"></a>
+</template>
 </html>

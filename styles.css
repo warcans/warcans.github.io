@@ -47,13 +47,14 @@ body {
 }
 
 .streamers {
-    padding-top: 60px;
+    padding-top: 50px;
     flex-wrap: wrap;
     column-gap: 10px;
     display:flex;
-    background: #121212;
+    background: #0d0d0d;
     padding-left: 8%;
     padding-right: 8%;
+    padding-bottom: 100px;
 }
 
 .streamer-card {
@@ -107,8 +108,8 @@ body {
     transition: z-index step-end 0.05s;
     z-index: 1;
     position: relative;
-    margin-bottom: -410px;
-    height: 410px;
+    margin-bottom: -425px;
+    height: 425px;
     cursor: pointer;
 }
 
@@ -223,6 +224,16 @@ body {
     flex-direction: column;
     justify-content: center;
     width: fit-content;
+}
+
+.footer{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height:140px;
+    background-color: #0a0a0a;
 }
 
 @keyframes my-animation {
