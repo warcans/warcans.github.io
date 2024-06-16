@@ -2,14 +2,14 @@ var streamerFetch = await fetch("streamers.json")
 var streamers = await streamerFetch.json()
 
 // LIVE PUBLISH
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-var live_statusFetch
-loadXMLDoc()
-var live_status = JSON.parse(live_statusFetch)
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
 // DEV
-//var live_statusFetch = await fetch("live_status.json")
-//var live_status = await live_statusFetch.json()
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 const template = document.querySelector("#default-card")
 
@@ -50,7 +50,10 @@ streamers.forEach(user => {
     if (user.bluesky != null) bluesky.href = "https://bsky.app/profile/" + user.bluesky
     else bluesky.remove()
 
-    if (user.youtube != null) youtube.href = "https://youtube.com/" + user.youtube
+    if (user.youtube != null) {
+        if (user.youtube.includes("@")) youtube.href = "https://youtube.com/" + user.youtube
+        else youtube.href = "https://youtube.com/channel/" + user.youtube
+    }
     else youtube.remove()
 
     if (user.tiktok != null) tiktok.href = "https://tiktok.com/" + user.tiktok

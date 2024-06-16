@@ -5,7 +5,7 @@
         "description": "This is an example user. Remove before publishing. The description should be the length of this string, or it might risk overflow on some devices",
         "twitter": "exampleuser",
         "bluesky":"exampleuser.bsky.social",
-        "youtube": "@exampleuserYT",
+        "youtube": "@exampleuserYT / UCTskk43qag-4g5aGsFDSE",
         "tiktok": "@exampleuser",
         "discord": "discordlink",
         "color1": "#3e5456"
@@ -13,17 +13,25 @@
     {
         "name": "monqueeeek",
         "image":"images/headshots/monqueeeek.jpg",
-        "color1": "#7d6867"
+        "color1": "#7d6867",
+        "twitter": "Monqueeeek",
+        "tiktok": "@monqueeeek",
+        "youtube": "UCTsU3f44JOJ-EPtINxY8fzg"
     },
     {
         "name": "Octavess",
         "image":"images/headshots/octavess.jpg",
-        "color1": "#81c4a9"
+        "color1": "#81c4a9",
+        "twitter": "Octavess3",
+        "youtube": "UCZjp3IlxQ8mIu4piAShEEpw"
     },
     {
         "name": "ItsWolflord",
         "image":"images/headshots/itswolflord.png",
-        "color1": "#8e79d5"
+        "color1": "#8e79d5",
+        "twitter": "ItsWolflord",
+        "tiktok": "@itswolflord",
+        "youtube": "@wolflordvt"
     },
     {
         "name": "rhopus",
@@ -38,68 +46,93 @@
     {
         "name": "SkiBiPro",
         "image":"images/headshots/skibipro.png",
-        "color1": "#379332"
+        "color1": "#379332",
+        "youtube": "UCSuyJXwUwVpJZtgZ7rfhm5w",
+        "twitter": "SkibiPro"
     },
     {
         "name": "WilliamPatriot",
         "image":"images/headshots/williampatriot.png",
-        "color1": "#063695"
+        "color1": "#063695",
+        "youtube": "UC0cDAWoetX1mFB5wfiKhMJg"
     },
     {
         "name": "HexManikin",
         "image":"images/headshots/hexmanikin.jpg",
-        "color1": "#a06a67"
+        "color1": "#a06a67",
+        "twitter": "HexManikin"
     },
     {
         "name": "TheGourdie",
         "image":"images/headshots/thegourdie.png",
-        "color1": "#bf7810"
+        "color1": "#bf7810",
+        "tiktok": "@thegourdie",
+        "twitter": "TheGourdie"
     },
     {
         "name": "ViperKii",
         "image":"images/headshots/viperkii.jpg",
-        "color1": "#2e0807"
+        "color1": "#2e0807",
+        "twitter": "ViperKii",
+        "tiktok": "@viperkiiofficial",
+        "youtube": "UCQ1VOjSMATaOfi2xOLuXoag"
     },
     {
         "name": "JasperGeist",
         "image":"images/headshots/jaspergeist.jpg",
-        "color1": "#5e8e8a"
+        "color1": "#5e8e8a",
+        "twitter": "Jasper_Geist",
+        "tiktok": "@jasper_geist",
+        "youtube": "UCiouU3JEFUoxeSHhHa4O9rQ"
     },
     {
         "name": "ruiuminari",
         "image":"images/headshots/ruiuminari.jpg",
-        "color1": "#5cb8b2"
+        "color1": "#5cb8b2",
+        "twitter": "ruiuminari"
     },
     {
         "name": "kuxips",
         "image":"images/headshots/kuxips.png",
-        "color1": "#ffca00"
+        "color1": "#ffca00",
+        "twitter": "kuxips",
+        "tiktok": "@kuxips",
+        "youtube": "@kuxip"
     },
     {
         "name": "nijuuu",
         "image":"images/headshots/nijuuu.png",
-        "color1": "#f97ca5"
+        "color1": "#f97ca5",
+        "twitter":"nijuuVT",
+        "youtube":"@nijuuu",
+        "tiktok":"@nijuuVT"
     },
     {
         "name": "MediocreAtVideoGames",
         "image":"images/headshots/mediocreatvideogames.jpg",
-        "color1": "#5e6a56"
+        "color1": "#5e6a56",
+        "twitter": "MediocreAVG",
+        "youtube": "UCXYmUOoOGYecB76qxvWNY4A"
     },
     {
         "name": "PrincessBampy",
         "image":"images/headshots/princessbampy.jpg",
-        "color1": "#a369d0"
+        "color1": "#a369d0",
+        "twitter": "PrincessBampy",
+        "youtube": "UCP-Bk7LoK0j8gBpByjpwCyw"
     },
     {
         "name": "Vishi_An",
         "image":"images/headshots/vishi_an.png",
         "description":"A very normal cat and variety streamer",
-        "color1": "#085552"
+        "color1": "#085552",
+        "twitter": "Vishi_An",
+        "youtube": "@Vishi_An"
     },
     {
         "name": "Warcans_",
         "image":"images/headshots/warcans_.jpg",
-        "description": "🚀 here for testing 🚀",
+        "description": "🚀 HERE ONLY TO TEST 🚀",
         "twitter": "Warcans_",
         "youtube": "@Warcans",
         "bluesky": "warcans.bsky.social",
