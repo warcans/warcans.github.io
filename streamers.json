@@ -5,7 +5,9 @@
         {"name":"youtube@", "prefix":"https://youtube.com/@", "icon":"images/youtube.png"},
         {"name":"youtube#", "prefix":"https://youtube.com/channel/", "icon":"images/youtube.png"},
         {"name":"tiktok", "prefix":"https://tiktok.com/", "icon":"images/tiktok.png"},
-        {"name":"discord-server", "prefix":"https://discord.gg/", "icon":"images/discord.png"}
+        {"name":"discord-server", "prefix":"https://discord.gg/", "icon":"images/discord.png"},
+        {"name":"instagram", "prefix":"https://www.instagram.com/", "icon":"images/instagram.png"},
+        {"name":"custom1", "prefix":"", "icon":""}
     ],
 
     "streamers" : [
@@ -49,7 +51,8 @@
             "socials": {
                 "twitter": "ItsWolflord",
                 "youtube@": "wolflordvt",
-                "tiktok": "@itswolflord"
+                "tiktok": "@itswolflord",
+                "instagram": "wolflord"
             }
         },
         {
