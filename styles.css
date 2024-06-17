@@ -59,7 +59,8 @@ body {
 }
 
 .streamer-card {
-    transition: 0.1s all ease-in-out;
+    opacity: 0;
+    animation: 1s fade-in-animation 0.5s forwards;
     width: 300px;
     height: 475px;
     margin: 10px auto 10px auto;
@@ -273,5 +274,14 @@ body {
     }
     100% {
         transform: translateX(-105%);
+    }
+}
+
+@keyframes fade-in-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
