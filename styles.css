@@ -61,6 +61,7 @@ body {
 .streamer-card {
     opacity: 0;
     animation: 1s fade-in-animation 0.5s forwards;
+    transition: 0.1s all ease-in-out;
     width: 300px;
     height: 475px;
     margin: 10px auto 10px auto;
@@ -70,6 +71,7 @@ body {
     border-color: black;
     border-width: 1px;
     border-style: solid;
+    transform: scale(1);
 }
 
 .streamer-card::before {
