@@ -1,17 +1,17 @@
-// Fetch streamer data; works local dev and github
-var streamerFetch = await fetch("streamers.json")
-var streamers = await streamerFetch.json()
+//// DEV VERSION
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 //// LIVE VERSION
 //// URL needs to be the URL to which backend serves data
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-var live_statusFetch
-loadXMLDoc()
-var live_status = JSON.parse(live_statusFetch)
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
-//// DEV VERSION
-// var live_statusFetch = await fetch("live_status.json")
-// var live_status = await live_statusFetch.json()
+// Fetch streamer data; works local dev and github
+var streamerFetch = await fetch("streamers.json")
+var streamers = await streamerFetch.json()
 
 // This is the card template
 const template = document.querySelector("#default-card")
@@ -56,6 +56,7 @@ streamers.streamers.forEach(user => {
         var service
         var icon
 
+
         // Loop through configured socials in .json to find the correct data
         social_channels.forEach(channel =>{
             if (channel.name == social){
@@ -65,7 +66,7 @@ streamers.streamers.forEach(user => {
         })
 
         // Set link and icon
-        user_social.querySelector("#social").href = "" + service + user
+        user_social.querySelector("#social").href = service + user.socials[social]
         user_social.querySelector("#social-icon").src = icon
 
         // Add to template
