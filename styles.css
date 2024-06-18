@@ -79,7 +79,7 @@ body {
     content: "";
     width: 290px;
     height: 465px;
-    background-color: #000000a0;
+    background-color: #404040;
     display: block;
     border-radius: 17px;
 }
@@ -118,14 +118,15 @@ body {
 }
 
 .card-photo {
-    width: 286px;
-    height: 286px;
-    margin: 7px 7px 0 7px;
+    width: 290px;
+    height: 290px;
+    margin: 5px 5px 0 5px;
     display: flex;
     flex-direction: row;
     object-fit: cover;
     overflow: hidden;;
     border-radius: 14px 14px 14px 14px;
+    background-color: #00000080;
 }
 
 .card-name {
