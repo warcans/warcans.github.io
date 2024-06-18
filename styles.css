@@ -119,7 +119,7 @@ body {
 
 .card-photo {
     width: 290px;
-    height: 290px;
+    height: 288px;
     margin: 5px 5px 0 5px;
     display: flex;
     flex-direction: row;
