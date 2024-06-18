@@ -124,7 +124,7 @@ body {
     display: flex;
     flex-direction: row;
     object-fit: cover;
-    overflow: hidden;;
+    overflow: hidden;
     border-radius: 14px 14px 14px 14px;
     background-color: #00000080;
 }
@@ -199,7 +199,7 @@ body {
 }
 
 .card-footer img {
-    margin-top: 8px;
+    margin-top: 7px;
     height: 32px;
 }
 
