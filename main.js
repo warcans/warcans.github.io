@@ -1,13 +1,13 @@
 //// DEV VERSION
-//var live_statusFetch = await fetch("live_status.json")
-//var live_status = await live_statusFetch.json()
+var live_statusFetch = await fetch("live_status.json")
+var live_status = await live_statusFetch.json()
 
 //// LIVE VERSION
 //// URL needs to be the URL to which backend serves data
-const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
-var live_statusFetch
-loadXMLDoc()
-var live_status = JSON.parse(live_statusFetch)
+// const url = 'https://gist.githubusercontent.com/warcans/be6d1af29fba88ee1d458feff9bb7641/raw/live_status.json'
+// var live_statusFetch
+// loadXMLDoc()
+// var live_status = JSON.parse(live_statusFetch)
 
 // Fetch streamer data; works local dev and github
 var streamerFetch = await fetch("streamers.json")
@@ -49,28 +49,27 @@ streamers.streamers.forEach(user => {
     const social_wrapper = document.createDocumentFragment("div")
 
     // Add a social media link for each mentioned for user in streamers.json
-    for (var social in user.socials){
+    for (var social_name in user.socials){
 
         // Copy template
-        const  user_social = social_template.content.cloneNode(true)
-        var service
-        var icon
-
+        const  social_clone = social_template.content.cloneNode(true)
+        var social_prefix
+        var social_icon
 
         // Loop through configured socials in .json to find the correct data
         social_channels.forEach(channel =>{
-            if (channel.name == social){
-                service = channel.prefix
-                icon = channel.icon
+            if (channel.name == social_name){
+                social_prefix = channel.prefix
+                social_icon = channel.icon
             }
         })
 
         // Set link and icon
-        user_social.querySelector("#social").href = service + user.socials[social]
-        user_social.querySelector("#social-icon").src = icon
+        social_clone.querySelector("#social").href = social_prefix + user.socials[social_name]
+        social_clone.querySelector("#social-icon").src = social_icon
 
         // Add to template
-        social_wrapper.appendChild(user_social)
+        social_wrapper.appendChild(social_clone)
     }
 
     // Apply template to card
@@ -87,23 +86,35 @@ streamers.streamers.forEach(user => {
 
         // if user is live
         if (key.user_name.toLowerCase() == user.name.toLowerCase()){
+
             live = true
             var animation_length = ((100/key.game.length*key.game.length)/600) / (1/(key.game.length+26))
-            card_status.textContent = key.game.toUpperCase()
-            card_status.style = "color:red;text-shadow:red 0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
-            card_style += ";box-shadow: 0px 0px 10px 0px red"
             var a = clone.getElementById("bgcolor")
-            a.setAttribute("status", "live")
 
             // if user is playing minecraft and has amigi in title
             if (key.is_minecraft == "true" && key.is_amigis == "true"){
+
                 amigi = true
-                var amigi_text = "AMIGI MINECRAFT"
+                
+                // scrolling text
+                var amigi_text = "AMIGI MINECRAFT" 
                 card_status.textContent = amigi_text
+
+                // scrolling animation
                 animation_length = ((100/amigi_text.length*amigi_text.length)/600) / (1/(amigi_text.length+26))
                 card_status.style = "color:lime;text-shadow:0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
-                card_style += ";box-shadow: 0px 0px 10px 0px lime;"
-                a.setAttribute("status", "amigi")
+                
+                card_style += ";box-shadow: 0px 0px 10px 0px lime;" // glow
+                a.setAttribute("status", "amigi") // apply css-style
+            }
+            else {
+                card_status.textContent = key.game.toUpperCase() // scrolling text
+
+                // scrolling animation
+                card_status.style = "color:red;text-shadow:red 0px 0px 15px;animation: my-animation linear infinite " + animation_length + "s;"
+        
+                card_style += ";box-shadow: 0px 0px 10px 0px red" // glow
+                a.setAttribute("status", "live") // apply css-style
             }
         }
     })

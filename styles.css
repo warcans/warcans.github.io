@@ -233,8 +233,10 @@ body {
     width: 100%;
     min-height: 200px;
     margin-bottom: 0px;
-    font-weight: 900;
-    color:#101010;
+    color:white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 10px;
     background-color: #0a0a0a;
     display:flex;
     flex-direction: column;
@@ -245,10 +247,10 @@ body {
 
 .footer{
     margin: 10px auto 0px auto;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    width:200px;
+    width: 200px;
 }
 
 #credit {
@@ -258,22 +260,22 @@ body {
 }
 
 #vishi {
-    margin: auto 5px;
+    margin: 0 5px;
     height: fit-content;
     text-align: end;
     width: 800px;
 }
 
 #warcans {
-    margin: auto 5px;
+    margin: 0 5px;
     height: fit-content;
     text-align: left;
     width: 800px;
 }
 
 #splitter {
-    width:fit-content;
     margin: 0;
+    width:fit-content;
 }
 
 @keyframes my-animation {
