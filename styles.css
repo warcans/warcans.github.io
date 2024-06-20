@@ -181,7 +181,7 @@ body {
     width: 90%;
     flex-direction: row;
     justify-content: space-evenly;
-    transition: 0.2s all ease-in-out;
+    transition: 0.2s height opacity ease-in-out;
     cursor: default;
     overflow: hidden;
     opacity: 0%;
@@ -194,12 +194,8 @@ body {
     height:47px;
 }
 
-.card-footer a {
-    align-content: center;
-}
-
 .card-footer img {
-    margin-top: 7px;
+    margin-top: 8px;
     height: 32px;
 }
 
